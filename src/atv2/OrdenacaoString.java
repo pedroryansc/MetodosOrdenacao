@@ -33,6 +33,17 @@ public class OrdenacaoString {
 	}
 	
 	public String[] insertionSort(String[] array) {
+		String aux;
+		int j;
+		for(int i = 1; i < array.length; i++) {
+			aux = array[i];
+			j = i - 1;
+			while(j >= 0 && array[j].compareTo(aux) > 0) {
+				array[j + 1] = array[j];
+				j = j - 1;
+			}
+			array[j + 1] = aux;
+		}
 		return array;
 	}
 	
